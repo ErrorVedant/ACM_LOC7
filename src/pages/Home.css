@@ -1,0 +1,25 @@
+@keyframes colorPulse {
+    0% {
+      background-color: #002dc6; /* Purple */
+      color: white;
+    }
+    50% {
+      background-color: white; /* White */
+      color: #002dc6; /* Purple text */
+    }
+    100% {
+      background-color: #002dc6; /* Purple */
+      color: white;
+    }
+  }
+  
+  /* Apply this animation to your button */
+  .glow-animation {
+    animation: colorPulse 1.5s infinite; /* 2s for full cycle, repeats infinitely */
+    transition: transform 0.3s ease;
+  }
+  
+  .glow-animation:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+  }
+  

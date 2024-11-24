@@ -5,7 +5,7 @@ import HomePage from './pages/HomePage';
 import Timeline from './components/Timeline';
 import MovingStars from './components/MovingStars';
 import PrizePool from './components/PrizePool';  // Import PrizePool component
-
+import AddressMap from './components/AddressMap';
 function App() {
   return (
     <div>
@@ -17,6 +17,7 @@ function App() {
           <PrizePool />  {/* Add the PrizePool component here */}
         </main>
         <Timeline />
+        <AddressMap />
         <Footer />
       </div>
     </div>

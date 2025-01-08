@@ -19,7 +19,7 @@ function Footer() {
           <div className="w-full md:w-1/3">
             <h3 className="text-lg font-semibold mb-2">Contact Us</h3>
             <p className="text-sm text-gray-400">
-              Email: info@vcethackathon.com<br />
+              Email: coreacm2.0@gmail.com<br />
               Phone: +91 82375 99879
             </p>
           </div>

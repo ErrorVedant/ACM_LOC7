@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import blockchain from './BLOCKCHAIN.jpg';
 import ai from './AIML.jpg';
-import cyber from './CYNERSECURITY.jpg';
 import web from './WEBAPP.jpg';
+import openInnovation from './OPENINNOVATION.jpg'; // Add image for Open Innovation
+import socialCause from './SOCIALCAUSE.jpg'; // Add image for Social Cause
 
 function DomainsSection() {
   const [expandedDomain, setExpandedDomain] = useState(1);
@@ -28,9 +29,15 @@ function DomainsSection() {
     },
     {
       id: 4,
-      title: 'Cyber Security',
-      image: cyber,
-      description: 'Secure digital infrastructure by learning and implementing advanced cybersecurity measures.',
+      title: 'Open Innovation',
+      image: openInnovation, // Use the Open Innovation image
+      description: 'Foster collaboration and creativity to solve real-world problems through open innovation.',
+    },
+    {
+      id: 5,
+      title: 'Social Cause',
+      image: socialCause, // Use the Social Cause image
+      description: 'Use technology to address social issues and make a positive impact on communities.',
     },
   ];
 
@@ -38,7 +45,7 @@ function DomainsSection() {
     <section className="py-20 relative">
       <div className="container mx-auto px-4">
         <h2 className="text-7xl md:text-7xl font-bold mb-12 text-center animate-slideUp">DOMAINS</h2>
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-6 gap-8">
           {domains.map((domain) => (
             <div
               key={domain.id}

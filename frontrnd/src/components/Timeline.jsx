@@ -3,7 +3,6 @@ import { motion, useAnimation, useInView } from "framer-motion";
 import { Sun, Moon, Star, Sparkles, Rocket, Award, Globe } from "lucide-react";
 import pacman from './pacman.jpg'; // Path to background image
 
-
 const timelineEvents = [
   {
     date: "8th January, 2025 12:00 AM",
@@ -83,8 +82,6 @@ const timelineEvents = [
   }
 ];
 
-
-
 const TimelineEvent = ({ event, index }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -140,11 +137,10 @@ const TimelineEvent = ({ event, index }) => {
   return (
     <div
       ref={ref}
-      className={`flex items-center ${index % 2 === 0 ? "flex-row" : "flex-row-reverse"
-        } mb-32`}
+      className={`flex items-center flex-col md:flex-row ${index % 2 === 0 ? "" : "md:flex-row-reverse"} mb-32`}
     >
       <motion.div
-        className={`w-1/2 ${index % 2 === 0 ? "pr-12" : "pl-12"}`}
+        className={`w-full md:w-1/2 ${index % 2 === 0 ? "pr-12" : "pl-12"}`}
         variants={cardVariants}
         initial="hidden"
         animate={controls}
@@ -162,14 +158,14 @@ const TimelineEvent = ({ event, index }) => {
         </div>
       </motion.div>
       <motion.div
-        className="w-16 h-16 rounded-full bg-[#0a1128] border-4 border-white flex items-center justify-center"
+        className="w-16 h-16 rounded-full bg-[#0a1128] border-4 border-white flex items-center justify-center mt-4 md:mt-0"
         variants={iconVariants}
         initial="hidden"
         animate={controls}
       >
         <Icon className="w-8 h-8 text-white" />
       </motion.div>
-      <div className={`w-1/2 ${index % 2 === 0 ? "pl-12" : "pr-12"}`} />
+      <div className={`w-full md:w-1/2 ${index % 2 === 0 ? "pl-12" : "pr-12"}`} />
     </div>
   );
 };
@@ -177,12 +173,12 @@ const TimelineEvent = ({ event, index }) => {
 export default function Timeline() {
   return (
     <section className="py-32 relative overflow-hidden min-h-screen"
-    style={{
-      backgroundImage: `url(${pacman})`,
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-      backgroundAttachment: "fixed",
-    }}>
+      style={{
+        backgroundImage: `url(${pacman})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundAttachment: "fixed",
+      }}>
       <div className="container mx-auto px-4">
         <div className="flex justify-center">
           <h2 className="text-5xl font-extrabold mb-8">OUR TIMELINE</h2>
